@@ -26,7 +26,7 @@ Chrome Downloads
     Then "Looking for a specific release?" phrase appears
 
 *** Keywords ***
-Homepage is open with "${browser}"
+Homepage has been opened with "${browser}"
     Open Browser    ${PAGE_ADDRESS}    browser=${browser}
     Set Test Variable    ${BROWSER}    ${browser}
 
