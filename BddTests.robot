@@ -1,5 +1,6 @@
 *** Settings ***
 Test Teardown     Close All Browsers
+Force Tags        BddTests
 Resource          lib/WebUiResources.robot
 Resource          labs/Lab01.robot
 
