@@ -6,22 +6,22 @@ Resource          labs/Lab01.robot
 
 *** Test Cases ***
 Firefox PSF
-    Given Homepage is open with "Firefox"
+    Given Homepage has been opened with "Firefox"
     When User clicks "PSF"
     Then "We Support The Python Community through..." phrase appears
 
 Firefox Community
-    Given Homepage is open with "Firefox"
+    Given Homepage has been opened with "Firefox"
     When User clicks "Community"
     Then "Great software is supported by great people" phrase appears
 
 Chrome About
-    Given Homepage is open with "Chrome"
+    Given Homepage has been opened with "Chrome"
     When User clicks "About"
     Then "Getting Started" phrase appears
 
 Chrome Downloads
-    Given Homepage is open with "Chrome"
+    Given Homepage has been opened with "Chrome"
     When User clicks "Downloads"
     Then "Looking for a specific release?" phrase appears
 
