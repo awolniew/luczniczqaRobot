@@ -4,18 +4,15 @@ Resource          ../labs/Lab01.robot
 
 *** Keywords ***
 Check If Call Has Been Performed
-    ImageHorizonLibrary.Set Reference Folder    ${IMAGE_HORIZON_REFERENCE_FOLDER}
-    Wait Until Keyword Succeeds    10s    0.1s    Is Calling Screen Visible
+    Wait Until Keyword Succeeds    15s    1s    Is Calling Screen Visible
 
 Close Application
-    ImageHorizonLibrary.Set Reference Folder    ${IMAGE_HORIZON_REFERENCE_FOLDER}
-    Wait Until Keyword Succeeds    10s    0.1s    ImageHorizonLibrary.Click Image    closebutton
+    Wait And Click Image    closebutton
 
 Find Contact For A Call
     [Arguments]    ${contactNumber}
-    ImageHorizonLibrary.Set Reference Folder    ${IMAGE_HORIZON_REFERENCE_FOLDER}
-    Wait Until Keyword Succeeds    15s    0.1s    ImageHorizonLibrary.Click Image    findacontact
-    Wait Until Keyword Succeeds    15s    0.1s    ImageHorizonLibrary.Type    ${contactNumber}
+    Wait And Click Image    findacontact
+    Wait Until Keyword Succeeds    15s    1s    ImageHorizonLibrary.Type    ${contactNumber}
 
 Is Calling Screen Visible
     ${wasCalling}    ImageHorizonLibrary.Does Exist    iscalling
@@ -23,9 +20,11 @@ Is Calling Screen Visible
     Run Keyword If    "${wasCalling}" != "True"    Fail    Call has not been performed.
 
 Launch Application
-    ImageHorizonLibrary.Set Reference Folder    ${IMAGE_HORIZON_REFERENCE_FOLDER}
-    Wait Until Keyword Succeeds    10s    0.1s    ImageHorizonLibrary.Click Image    zoipericon
+    Wait And Click Image    zoipericon
 
 Perform Call
-    ImageHorizonLibrary.Set Reference Folder    ${IMAGE_HORIZON_REFERENCE_FOLDER}
-    Wait Until Keyword Succeeds    10s    0.1s    ImageHorizonLibrary.Click Image    call
+    Wait And Click Image    call
+
+Wait And Click Image
+    [Arguments]    ${image}
+    Wait Until Keyword Succeeds    15s    1s    ImageHorizonLibrary.Click Image    ${image}
