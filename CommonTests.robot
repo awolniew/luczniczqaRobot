@@ -45,4 +45,4 @@ Robot Variables
 
 *** Keywords ***
 Robot Variables Teardown
-    Pass Execution If    "${testStatus}" == "PASS"    RrTeardown skipped - test has been finished successfully.
+    Pass Execution If    "${testStatus}" == "PASS"    Teardown skipped - test has been finished successfully.
