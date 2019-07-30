@@ -4,7 +4,7 @@ Resource          ../labs/Lab01.robot
 
 *** Keywords ***
 Check If Call Has Been Performed
-    Wait Until Keyword Succeeds    15s    1s    Is Calling Screen Visible
+    Wait Until Keyword Succeeds    10s    0.1s    Is Calling Screen Visible
 
 Close Application
     Wait And Click Image    closebutton
@@ -12,7 +12,7 @@ Close Application
 Find Contact For A Call
     [Arguments]    ${contactNumber}
     Wait And Click Image    findacontact
-    Wait Until Keyword Succeeds    15s    1s    ImageHorizonLibrary.Type    ${contactNumber}
+    Wait Until Keyword Succeeds    10s    0.1s    ImageHorizonLibrary.Type    ${contactNumber}
 
 Is Calling Screen Visible
     ${wasCalling}    ImageHorizonLibrary.Does Exist    iscalling
@@ -27,4 +27,4 @@ Perform Call
 
 Wait And Click Image
     [Arguments]    ${image}
-    Wait Until Keyword Succeeds    15s    1s    ImageHorizonLibrary.Click Image    ${image}
+    Wait Until Keyword Succeeds    10s    0.1s    ImageHorizonLibrary.Click Image    ${image}
