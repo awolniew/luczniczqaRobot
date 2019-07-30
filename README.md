@@ -1,2 +1,2 @@
 # luczniczqaRobot
-Examples for ŁuczniczQA Robot Framework presenatation
+Examples for ŁuczniczQA Robot Framework presenatation.
