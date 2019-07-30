@@ -15,7 +15,8 @@ Resource          lib/Zoiper.robot
 
 *** Test Cases ***
 ImageHorizonLibraryExample
-    Zoiper.Run
-    Zoiper.Findcontactforacall    123456    # It shows that robot is case and space insensitive.
+    [Documentation]    This test case runs Zoiper softphone and performs a call.
+    Zoiper.Launch Application
+    Zoiper.Findcontactforacall    ${PHONE_NUMBER}    # It shows that robot is case and space insensitive.
     Zoiper.Perform Call
     Zoiper.Check If Call Has Been Performed
