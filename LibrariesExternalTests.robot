@@ -1,20 +1,21 @@
 *** Settings ***
+Force Tags        LibrariesExternalTests
 Library           AppiumLibrary
 Library           FtpLibrary.py
 Library           HttpLibrary.HTTP
-Library           ImageHorizonLibrary    reference_folder=graphicsSap
+Library           ImageHorizonLibrary    reference_folder=graphics
 Library           REST    https://jsonplaceholder.typicode.com
 Library           SapGuiLibrary
 Library           SeleniumLibrary
 Library           SSHLibrary
 Library           WhiteLibrary
 Library           IOSLibrary    # Works only with robotframework==2.8.2-2.8.7
+Resource          labs/Lab01.robot
+Resource          lib/Zoiper.robot
 
 *** Test Cases ***
 ImageHorizonLibraryExample
-    ImageHorizonLibrary.Click Image    zoipericon
-    Sleep    5s
-    ImageHorizonLibrary.Click Image    findacontact
-    ImageHorizonLibrary.Press Combination    1    2    3    5    6
-    Sleep    2s
-    ImageHorizonLibrary.Click Image    call
+    Zoiper.Run
+    Zoiper.Findcontactforacall    123456    # It shows that robot is case and space insensitive.
+    Zoiper.Perform Call
+    Zoiper.Check If Call Has Been Performed
