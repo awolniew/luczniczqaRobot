@@ -20,3 +20,4 @@ ImageHorizonLibraryExample
     Zoiper.Findcontactforacall    ${PHONE_NUMBER}    # It shows that robot is case and space insensitive.
     Zoiper.Perform Call
     Zoiper.Check If Call Has Been Performed
+    [Teardown]    Zoiper.Close Application
