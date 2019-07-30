@@ -13,7 +13,7 @@ Check Title v2
 
 Failing Check Title
     [Tags]    nonCricitical
-    Check Title    ${PAGE_ADDRESS}    błędny tytuł
+    Check Title    ${PAGE_ADDRESS}    Incorrect title
 
 Chrome - Check Main Navigation Menu
     [Setup]    Open Browser    http://www.python.org    browser=Chrome
