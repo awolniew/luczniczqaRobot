@@ -25,3 +25,7 @@ Perform Call
 Launch Application
     ImageHorizonLibrary.Set Reference Folder    ${IMAGE_HORIZON_REFERENCE_FOLDER}
     Wait Until Keyword Succeeds    5s    0.1    ImageHorizonLibrary.Click Image    zoipericon
+
+Close Application
+    ImageHorizonLibrary.Set Reference Folder    ${IMAGE_HORIZON_REFERENCE_FOLDER}
+    Wait Until Keyword Succeeds    5s    0.1    ImageHorizonLibrary.Click Image    closebutton
