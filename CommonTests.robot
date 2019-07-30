@@ -43,6 +43,21 @@ Robot Variables
     Log    TEST_DOCUMENTATION=${TEST_DOCUMENTATION}    WARN
     [Teardown]    Robot Variables Teardown
 
+If Example
+    [Documentation]    This is sample documentation.
+    [Tags]    WEEKLY    THREAD-1
+    ${firstValue}    Set Variable    123
+    ${secondValue}    Set Variable    456
+    ${stringExample}    Set Variable    someString
+    Run Keyword If    ${firstValue} < 200    Log    ${firstValue} is lower than 200
+    ...    ELSE IF    ${firstValue} > 200    Log    ${firstValue} is greater than 200
+    ...    ELSE    Log    ${firstValue} equals 200
+    Run Keyword If    (${firstValue} == 123 and ${secondValue} == 123) or "${stringExample}" == "someString"    Log    stringExample equals as a string.    WARN
+    ...    ELSE IF    ${firstValue} == 123 and ${secondValue} == 456    Log    Both equals    WARN
+    ${conditionalVariable}    Set Variable If    ${firstValue} == 123 and ${secondValue} == 789    ConditionOK    ConditionNOK
+    Log    ${conditionalVariable}    WARN
+    [Teardown]    Robot Variables Teardown
+
 *** Keywords ***
 Robot Variables Teardown
     Pass Execution If    "${testStatus}" == "PASS"    Teardown skipped - test has been finished successfully.
