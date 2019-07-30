@@ -1,9 +1,4 @@
 *** Keywords ***
-Say Hello X Times
-    [Arguments]    ${iterations}
-    : FOR    ${i}    IN RANGE    ${iterations}
-    \    Log    Hello    WARN
-
 Documentation Show
     [Documentation]    1. _italic text_
     ...
@@ -13,3 +8,8 @@ Documentation Show
     ...    | *Table* | with | _three_ columns |
     ...    | And | two rows |
     Log To Console    I just show documentation ;)
+
+Say Hello X Times
+    [Arguments]    ${iterations}
+    : FOR    ${i}    IN RANGE    ${iterations}
+    \    Log    Hello    WARN
