@@ -12,6 +12,7 @@ FF Community - Pass
                       Community    Great software is supported by great people    Firefox
 
 FF Community - Fail
+                      [Tags]       nonCritical
                       Community    Our community is so small... :-(               Firefox
 
 Chrome About          About        Getting Started                                Chrome

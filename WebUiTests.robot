@@ -12,6 +12,7 @@ Check Title v2
     Check Title    ${PAGE_ADDRESS}    Welcome to Python.org
 
 Failing Check Title
+    [Tags]    nonCricitical
     Check Title    ${PAGE_ADDRESS}    błędny tytuł
 
 Chrome - Check Main Navigation Menu

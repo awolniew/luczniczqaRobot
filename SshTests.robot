@@ -7,7 +7,7 @@ Resource          lib/SshResources.robot
 
 *** Test Cases ***
 Check Free Space
-    [Tags]    CENTOS-1    Daily
+    [Tags]    CENTOS-1    Daily    nonCritical
     ${freeSpace}    Execute Command    df / | awk '{ print $4 }' | tail -1
     Run Keyword If    ${freeSpace} < 99999999999999999    Fail    Disk is almost full! Only ${freeSpace} KB left!!
 
