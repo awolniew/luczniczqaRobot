@@ -6,7 +6,9 @@ Say Hello X Times
 
 Documentation Show
     [Documentation]    1. _italic text_
+    ...
     ...    2. *bold text*
+    ...
     ...    3. Table example
     ...    | *Table* | with | _three_ columns |
     ...    | And | two rows |
