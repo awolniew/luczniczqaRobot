@@ -14,4 +14,6 @@ Library           SikuliLibrary    mode=NEW
 
 *** Test Cases ***
 Example Test Case
+    [Setup]
     Log    I am just an example.
+    [Teardown]
